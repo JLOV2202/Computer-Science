@@ -1,2 +1,2 @@
 # Computer Science
- Bacharelado em Ciência da Computação na Universidade Positivo.
+ Algumas atividades feitas durante o bacharelado em Ciência da Computação na Universidade Positivo.
