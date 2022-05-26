@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #11101d;
+    padding: 6px 14px;
+}
+
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+.logo_content .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar ul{
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 40px;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+
+.sidebar ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+
+.sidebar ul li i{
+    height: 40px;
+    min-width: 40px;
+    border-radius: 12px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.home_content .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin-top: 12px;
+}
+
+.home_content .btn {
+    position: absolute;
+    top: 2%;
+    left: 240px;
+    height: 40px;
+    width: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: yellow;
+    color: #11101d;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.home_content .btn:hover {
+    background-color: #11101d;
+    color: yellow;
+}
+
+hr {
+    border: 1px solid #11101d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.result i {
+    width: 100%;
+    color: #11101d;
+}
+
+.result{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.result #exit{
+    width: 100%;
+    padding-left: 28px;
+    border-radius: 10px;
+}
