@@ -91,7 +91,7 @@ body{
 
 .home_content .btn {
     position: absolute;
-    top: 2%;
+    top: 16px;
     left: 240px;
     height: 40px;
     width: 50px;
@@ -116,19 +116,19 @@ hr {
     margin-bottom: 10px;
 }
 
-.result i {
-    width: 100%;
-    color: #11101d;
-}
-
 .result{
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.result #exit{
+.result i {
     width: 100%;
+    color: #11101d;
+}
+
+.result #exit{
+    width: 90%;
     padding-left: 28px;
     border-radius: 10px;
 }
