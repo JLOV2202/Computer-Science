@@ -26,7 +26,7 @@ int main() {
 
 	setlocale(LC_ALL, "Portuguese");
 
-	pessoa contato[100];
+	pessoa contato[100] = { "null", "null", "null"};
 
 	int op = 0;
 	int index = 0;
@@ -60,7 +60,7 @@ int main() {
 			listContato(contato, index);
 			break;
 		case 4:
-
+			system("cls");
 			printf("\n------ Excluir Contato ------\n");
 			printf("\nInforme o Código: ");
 			scanf("%d", &id);
