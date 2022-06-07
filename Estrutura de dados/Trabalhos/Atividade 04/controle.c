@@ -125,12 +125,13 @@ void newDespesa(despesa* contas) {
 void listDespesa(despesa contas[], int index, float sal) {
 
 	float tot = 0;
+	int i = 0;
 
 	system("cls");
 	printf("\n ---------- Listagem de Despesas ----------\n");
 
 	printf("\n| Cód |    Nome    |    Valor     | Tipo  |\n");
-	for (int i = 0; i < index; i++) {
+	for ( i = 0; i < index; i++) {
 		printf("|  %.2d | %10s | R$%10.2f | %5s |\n", i, contas[i].nome, contas[i].val, (contas[i].tipo == 0 ? "Fixo" : "Extra"));
 		tot += contas[i].val;
 	}

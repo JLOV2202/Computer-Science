@@ -146,15 +146,17 @@ void searchContato(pessoa contato[], int index) {
 			printf("\n---- Consuta por Nome ----");
 			printf("\nInforme o Nome: ");
 			gets(search);
-			for (int i = 0; i < index; i++) {
+			for (i = 0; i < index; i++) {
 				if (strcmp(search, contato[i].nome) == 0) {
 					printf("\n Código...: %i ", i);
 					printf("\n Nome.....: %s", contato[i].nome);
 					printf("\n Telefone.: %s", contato[i].tel);
 					printf("\n Email....: %s", contato[i].email);
-				} else {
-					printf("\n Contato Não Encontrado!");
+					break;
 				}
+			}
+			if (strcmp(search, contato[i].email) != 0){
+				printf("\n Contato Não Encontrado!!!");
 			}
 			printf("\n\n");
 			system("pause");
@@ -164,15 +166,17 @@ void searchContato(pessoa contato[], int index) {
 			printf("\n---- Consuta por Telefone ----");
 			printf("\nInforme o Telefone: ");
 			gets(search);
-			for (int i = 0; i < index; i++) {
+			for (i = 0; i < index; i++) {
 				if (strcmp(search, contato[i].tel) == 0) {
 					printf("\n Código...: %i ", i);
 					printf("\n Nome.....: %s", contato[i].nome);
 					printf("\n Telefone.: %s", contato[i].tel);
 					printf("\n Email....: %s", contato[i].email);
-				} else {
-					printf("\n Contato Não Encontrado!");
+					break;
 				}
+			}
+			if (strcmp(search, contato[i].email) != 0){
+				printf("\n Contato Não Encontrado!!!");
 			}
 			printf("\n\n");
 			system("pause");
@@ -182,16 +186,17 @@ void searchContato(pessoa contato[], int index) {
 			printf("\n---- Consuta por Email ----");
 			printf("\nInforme o Email: ");
 			gets(search);
-			for (int i = 0; i < index; i++) {
+			for (i = 0; i < index; i++) {
 				if (strcmp(search, contato[i].email) == 0) {
 					printf("\n Código...: %i ", i);
 					printf("\n Nome.....: %s", contato[i].nome);
 					printf("\n Telefone.: %s", contato[i].tel);
 					printf("\n Email....: %s", contato[i].email);
+					break;
 				}
-				else {
-					printf("\n Contato Não Encontrado!");
-				}
+			}
+			if (strcmp(search, contato[i].email) != 0){
+				printf("\n Contato Não Encontrado!!!");
 			}
 			printf("\n\n");
 			system("pause");
@@ -204,9 +209,11 @@ void searchContato(pessoa contato[], int index) {
 }
 
 void listContato(pessoa contato[], int index) {
+	int i = 0;
+	
 	system("cls");
 	printf("\n----- Listagem de Contatos -----\n");
-	for (int i = 0; i < index; i++) {
+	for (i = 0; i < index; i++) {
 		printf("\n Código...: %d", i);
 		printf("\n Nome.....: %s", contato[i].nome);
 		printf("\n Telefone.: %s", contato[i].tel);

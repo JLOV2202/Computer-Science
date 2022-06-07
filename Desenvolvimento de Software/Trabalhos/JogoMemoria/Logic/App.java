@@ -1,6 +1,10 @@
 package Logic;
+
+import Interface.FrmMemorize;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        FrmMemorize window = new FrmMemorize();
+        window.frame.setVisible(true);
     }
 }
