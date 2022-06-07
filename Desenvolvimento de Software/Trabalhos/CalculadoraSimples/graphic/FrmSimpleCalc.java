@@ -1,12 +1,12 @@
-package Interface;
+package graphic;
+
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
-import javax.swing.DefaultComboBoxModel;
 
 public class FrmSimpleCalc extends JFrame{
 
@@ -14,11 +14,7 @@ public class FrmSimpleCalc extends JFrame{
     private JTextField txtX;
     private JTextField txtY;
 
-    public FrmSimpleCalc (){
-        initialize();
-    }
-
-    public void initialize(){
+    public FrmSimpleCalc(){
         frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Arial", Font.PLAIN, 12));
 		frame.setBounds(100, 100, 450, 150);
@@ -55,16 +51,20 @@ public class FrmSimpleCalc extends JFrame{
 		frame.getContentPane().add(opLabel);
 		
 		// Box com as Opções
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Soma", "Subtração", "Divisão", "Multiplicação"}));
+		String[] op = {"Soma", "Subtração", "Divisão", "Multiplicação"};
+		JComboBox<String> comboBox = new JComboBox<String>(op);
 		comboBox.setFont(new Font("Arial", Font.PLAIN, 20));
 		comboBox.setBounds(128, 61, 150, 30);
 		frame.getContentPane().add(comboBox);
 		
 		// Botão para Calcular
-		JButton btcCalc = new JButton("Calcular");
-		btcCalc.setFont(new Font("Arial", Font.PLAIN, 20));
-		btcCalc.setBounds(288, 61, 120, 30);
-		frame.getContentPane().add(btcCalc);
+		JButton btnCalc = new JButton("Calcular");
+		btnCalc.setFont(new Font("Arial", Font.PLAIN, 20));
+		btnCalc.setBounds(288, 61, 120, 30);
+		frame.getContentPane().add(btnCalc);
+		
+		Action action = new Action(txtX, txtY, comboBox);
+		btnCalc.addActionListener(action);
+
     }
 }
