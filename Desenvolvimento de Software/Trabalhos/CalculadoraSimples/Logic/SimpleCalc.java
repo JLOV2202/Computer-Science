@@ -11,7 +11,7 @@ public class SimpleCalc {
     }
 
     public static Double div(Double x, Double y){
-            return x/y;
+        return x/y;
     }
 
     public static Double mul(Double x, Double y){
