@@ -1,4 +1,4 @@
-package Interface;
+package graphic;
 
 import javax.swing.JToggleButton;
 import java.awt.Font;

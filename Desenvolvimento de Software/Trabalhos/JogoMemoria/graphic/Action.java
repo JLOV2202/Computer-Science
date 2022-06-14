@@ -1,10 +1,10 @@
-package Interface;
+package graphic;
 
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 
-import Logic.Memorize;
+import logic.Memorize;
 
 public class Action extends AbstractAction {
 

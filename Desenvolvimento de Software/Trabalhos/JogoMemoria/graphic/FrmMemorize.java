@@ -1,9 +1,10 @@
-package Interface;
+package graphic;
 
 import javax.swing.JFrame;
-import java.awt.GridLayout;
 
-import Logic.Memorize;
+import logic.Memorize;
+
+import java.awt.GridLayout;
 
 public class FrmMemorize extends JFrame{
 

@@ -1,8 +1,8 @@
-package Logic;
+package logic;
 
 import java.util.Random;
 
-import Interface.cardBtn;
+import graphic.cardBtn;
 
 public class Memorize {
 

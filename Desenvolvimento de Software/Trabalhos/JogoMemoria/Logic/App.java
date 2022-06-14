@@ -1,6 +1,6 @@
-package Logic;
+package logic;
 
-import Interface.FrmMemorize;
+import graphic.FrmMemorize;
 
 public class App {
     public static void main(String[] args) throws Exception {
