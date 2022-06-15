@@ -9,6 +9,12 @@ public class Contact {
     Date doB;
     HashMap<String, String> email;
     HashMap<String, String> phNo;
-    HashMap<String, String> addr;
+    Address addr;
 
+
+    public Contact(){
+        addr = new Address();
+
+
+    }
 }
