@@ -1,68 +1,133 @@
+import java.util.Scanner;
+
 public class Address {
-    
-    // Em português, porque ingles só complicou.
-    String log; // Logradouro
-    int num; // Número
-    String cmp; // Complemento
-    String brr; // Bairro
-    String cep; // CEP
-    String cdd; // Cidade
-    
-    protected Address(String log, int num, String cmp, String brr, String cep, String cdd) {
-        this.log = log;
+    private String logradouro;
+    private int num;
+    private String comp;
+    private String district;
+    private String cep;
+    private String city;
+
+    public Address() {
+    }
+
+    public Address(String logradouro, int num, String comp, String district, String cep, String city) {
+        this.logradouro = logradouro;
         this.num = num;
-        this.cmp = cmp;
-        this.brr = brr;
+        this.comp = comp;
+        this.district = district;
         this.cep = cep;
-        this.cdd = cdd;
+        this.city = city;
     }
 
-    // Getters e Setters Geral
-    public String getLog() {
-        return log;
+    // #region methods
+
+    public void flush_in(Scanner scanner) {
+        if (scanner.hasNextLine()) {
+            scanner.nextLine();
+        }
     }
 
-    public void setLog(String log) {
-        this.log = log;
+    public void setAddr() {
+        String logradouro = "";
+        int num = 0;
+        String comp = "";
+        String district = "";
+        String cep = "";
+        String city = "";
+
+        Boolean cont = true;
+        Scanner input = new Scanner(System.in);
+
+        while (cont) {
+            try {
+                System.out.print("Logradouro: ");
+                this.logradouro = input.nextLine();
+
+                System.out.print("Numero: ");
+                this.num = input.nextInt();
+
+                flush_in(input);
+
+                System.out.print("Complemento: ");
+                this.comp = input.nextLine();
+
+                System.out.print("Bairro: ");
+                this.district = input.nextLine();
+
+                System.out.print("CEP: ");
+                this.cep = input.nextLine();
+
+                System.out.print("Cidade: ");
+                this.city = input.nextLine();
+
+                cont = false;
+
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+    }
+    // #endregion
+
+    // #region getters
+    public String getLogradouro() {
+        return logradouro;
     }
 
     public int getNum() {
         return num;
     }
 
-    public void setNum(int num) {
-        this.num = num;
+    public String getComp() {
+        return comp;
     }
 
-    public String getCmp() {
-        return cmp;
-    }
-
-    public void setCmp(String cmp) {
-        this.cmp = cmp;
-    }
-
-    public String getBrr() {
-        return brr;
-    }
-
-    public void setBrr(String brr) {
-        this.brr = brr;
+    public String getDistrict() {
+        return district;
     }
 
     public String getCep() {
         return cep;
     }
 
+    public String getCity() {
+        return city;
+    }
+    // #endregion
+
+    // #region setters
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public void setComp(String comp) {
+        this.comp = comp;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
     public void setCep(String cep) {
         this.cep = cep;
     }
 
-    public String getCdd() {
-        return cdd;
+    public void setCity(String city) {
+        this.city = city;
+    }
+    // #endregion
+
+    @Override
+    public String toString() {
+
+        String str = logradouro + ". " + comp + " " + num + ", " + district + ", " + city + ", " + cep;
+
+        return str;
     }
 
-    public void setCdd(String cdd) {
-        this.cdd = cdd;
-    }
 }
