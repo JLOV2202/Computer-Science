@@ -1,10 +1,6 @@
 //Fabricio Bertoncello Filho e João Lucas de Oliveira Vieira
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {

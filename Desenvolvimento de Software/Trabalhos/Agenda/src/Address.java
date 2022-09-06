@@ -29,12 +29,6 @@ public class Address {
     }
 
     public void setAddr() {
-        String logradouro = "";
-        int num = 0;
-        String comp = "";
-        String district = "";
-        String cep = "";
-        String city = "";
 
         Boolean cont = true;
         Scanner input = new Scanner(System.in);
